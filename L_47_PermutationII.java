@@ -9,7 +9,7 @@ public class L_47_PermutationII {
             return;
         }
         for(int i=0;i<nums.length;i++){
-            // Creating a boolean array to keep check on duplicate/repeated element. If already used the also continue. It is storing the element that has already been used
+            // Creating a boolean array to keep check on duplicate/repeated element.If already used the also continue. It is storing the element that has already been used
            if(used[i]) continue;
             if(i>0 && nums[i] == nums[i-1] && !used[i-1]) continue;  //Checking if in the given array another duplicate of the used element is present the also continue. If not the also continue
             used[i] = true;   //making boolean [i] true then adding it in list to ensure that element is added
