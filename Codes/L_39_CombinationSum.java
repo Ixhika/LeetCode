@@ -18,7 +18,7 @@ public class L_39_CombinationSum {
         for(int i=start;i<candidates.length;i++){
             temp.add(candidates[i]);    //Not checking if elements are already in list or not as duplicates are allowed.
             backtrack(candidates,res,temp,target-candidates[i],i);    //not doing i+1 as we want to reuse the elements in the list
-            temp.remove(temp.size()-1);
+            temp.remove(temp.size()-1);    
         }
     }
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
