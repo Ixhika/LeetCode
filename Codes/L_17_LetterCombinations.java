@@ -1,33 +1,41 @@
 package Codes;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class L_17_LetterCombinations {
-      private Map<Character, String> digitToChar = Map.of(
-        '2',"abc", '3', "def",'4',"ghi",'5',"jkl",'6',"mno",'7',"pqrs",'8',"tuv",'9',"wxyz");
+       public List<String> letterCombinations(String digits) {
+        List<String> res = new ArrayList<>();
+        if(digits.length() == 0){
+            return new ArrayList<>();
+        }
+        HashMap<Character,String> map = new HashMap<>();
+        map.put('2',"abc");
+        map.put('3',"def");
+        map.put('4',"ghi");
+        map.put('5',"jkl");
+        map.put('6',"mno");
+        map.put('7',"pqrs");
+        map.put('8',"tuv");
+        map.put('9',"wxyz");
 
-    public void backtrack(String digits,List<String> ans,String cur,int index){
-         if (cur.length() == digits.length()) {
-            ans.add(cur);
-            return;
-        } else if (index >= digits.length()) {
-            return;
-        } else {
-            String digit = digitToChar.get(digits.charAt(index));
-            for (char c : digit.toCharArray()) {
-                backtrack(digits, ans, cur + c, index + 1);
-            }
-        }
+        backtrack(digits, map, res ,new StringBuilder() , 0);
+        return res;
+        
     }
-    public List<String> letterCombinations(String digits) {
-        if (digits.length() == 0) {
-            return new ArrayList();
+
+public void backtrack(String digits,HashMap<Character,String> map,List<String> res,StringBuilder temp,int idx){
+        if(idx == digits.length()){
+            res.add(temp.toString());
+            return;
         }
-        List<String> ans = new ArrayList();
-        String cur = "";
-        backtrack(digits, ans, cur, 0);
-        return ans;
+        String currString = map.get(digits.charAt(idx));
+        for(int i=0;i<currString.length();i++){
+             temp.append(currString.charAt(i));
+            backtrack(digits, map, res,temp, idx+1);
+            temp.deleteCharAt(temp.length()-1);
+        }
     }
 }
