@@ -21,3 +21,9 @@ public class L_62_UniquePath {
         return dp[0][0];   //We are returning the first position as we started counting paths from last 
     }
 }
+
+// Matrix of 3*7
+/*28 21 15 10 6 3 2 1
+ * 7 6 5 4 3 2 1
+ * 1 1 1 1 1 1 1 
+ */
