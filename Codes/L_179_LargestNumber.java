@@ -4,7 +4,7 @@ import java.util.Comparator;
 public class L_179_LargestNumber {
     // Time Complexity: O(nlogn) -> extra time due to sorting
     // Space Complexity: O(n) -> as we are making new string array of n length
-    
+
     public String largestNumber(int[] nums) {
 
         // Creating a string array to store all the numbers in form of string so that we can just concatenate the elements
@@ -25,6 +25,8 @@ public class L_179_LargestNumber {
 
         // Sorting the string array so that the most significant number will be in front
         Arrays.sort(str , cmp);
+        
+        // There is a minor edge case that comes up when the array consists of only zeroes, so if the most significant number is 0, we can simply return 0. 
         if(str[0].charAt(0) == '0'){
             return "0";
         }
