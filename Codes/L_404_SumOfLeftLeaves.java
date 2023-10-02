@@ -1,9 +1,24 @@
+package Codes;
+
 import javax.swing.tree.TreeNode;
 
 //  For given node we check whether its left child is a leaf. If it is the case, we add its value to answer, 
 //  otherwise recursively call method on left child. For right child we call method only if it has at least one nonnull child.
 
 public class L_404_SumOfLeftLeaves {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+           }
+    
+       }
      public int sumOfLeftLeaves(TreeNode root) {
         if(root == null){
             return 0;

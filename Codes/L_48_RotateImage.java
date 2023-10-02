@@ -1,3 +1,5 @@
+package Codes;
+
 public class L_48_RotateImage {
     // Time Complexity: O(n*n)
     // Space Complexity: O(1)

@@ -1,3 +1,5 @@
+package Codes;
+
 public class L_1658_MinimumOperationsToMakeSumEqualToX {
     // Time Complexity: O(n)
     // Space Complexity: O(1)

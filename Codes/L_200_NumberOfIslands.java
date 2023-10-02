@@ -1,3 +1,5 @@
+package Codes;
+
 public class L_200_NumberOfIslands {
 
     // Time Complexity: O(m*n*4^n) as we are traversing over every sqaure

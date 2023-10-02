@@ -1,3 +1,5 @@
+package Codes;
+
 public class L_62_UniquePath {
 
     // In question we can move only in two directions either right or down.

@@ -1,6 +1,21 @@
+package Codes;
+
 import javax.swing.tree.TreeNode;
 
 public class L_110_BalencedBinaryTree {
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+        TreeNode() {}
+        TreeNode(int val) { this.val = val; }
+        TreeNode(int val, TreeNode left, TreeNode right) {
+            this.val = val;
+            this.left = left;
+            this.right = right;
+           }
+    
+       }
      public boolean isBalanced(TreeNode root) {
         if(root == null){
             return true;

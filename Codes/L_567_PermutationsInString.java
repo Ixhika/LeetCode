@@ -1,3 +1,5 @@
+package Codes;
+
 import java.util.Arrays;
 
 public class L_567_PermutationsInString {
