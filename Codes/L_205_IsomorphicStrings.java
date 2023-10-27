@@ -41,7 +41,7 @@ public class L_205_IsomorphicStrings {
 }
 
 
-// this solution also correct but taking too much time and space
+// this solution taking too much time and space
 
 // HashMap<Character,Character> map1 = new HashMap<>();
 // HashMap<Character,Character> map2 = new HashMap<>();
