@@ -1,3 +1,5 @@
+package Codes;
+
 public class L_424_LongestRepeatingCharacterReplacement {
     // Time complexity: O(26*n)
     

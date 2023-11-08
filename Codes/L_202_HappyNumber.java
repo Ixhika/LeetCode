@@ -1,3 +1,7 @@
+package Codes;
+
+import java.util.HashSet;
+
 public class L_202_HappyNumber {
     public boolean isHappy(int n) {
         // Using set to prevent from infinite loop that is if we get a sum of Squares of any element is coming same that is already present in the set.
